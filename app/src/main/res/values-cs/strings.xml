@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Loading view-->
+    <string name="loading_view_error_msg">Omlouváme se, nastala neočekávaná chyba.</string>
+    <string name="loading_view_no_connection">Zkontrolujte vaše připojení k internetu.</string>
+    <string name="loading_view_reload_btn">Načíst znovu</string>
+
+</resources>

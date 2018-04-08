@@ -50,6 +50,9 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
 
+    // network connection
+    implementation 'com.github.pwittchen:reactivenetwork-rx2:0.12.3'
+
     // dagger
     implementation "com.google.dagger:dagger:${rootProject.ext.daggerVersion}"
     annotationProcessor "com.google.dagger:dagger-compiler:${rootProject.ext.daggerVersion}"

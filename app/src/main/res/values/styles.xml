@@ -1,11 +1,88 @@
 <resources>
-
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+
+    <!--Text styles-->
+
+    <style name="TextXLarge">
+        <item name="android:textSize">@dimen/text_xlarge</item>
+    </style>
+
+    <style name="TextXXLarge">
+        <item name="android:textSize">@dimen/text_xxlarge</item>
+    </style>
+
+    <style name="TextLarge">
+        <item name="android:textSize">@dimen/text_large</item>
+    </style>
+
+    <style name="TextMedium">
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+    <style name="TextSmall">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextLarge.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextMedium.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextSmall.Secondary">
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TextXLarge.BlackSecondary">
+        <item name="android:textSize">@color/text_black_secondary</item>
+    </style>
+
+    <style name="TextLarge.BlackSecondary">
+        <item name="android:textColor">@color/text_black_secondary</item>
+    </style>
+
+    <style name="TextMedium.BlackSecondary">
+        <item name="android:textColor">@color/text_black_secondary</item>
+    </style>
+
+    <style name="TextSmall.BlackSecondary">
+        <item name="android:textColor">@color/text_black_secondary</item>
+    </style>
+
+    <style name="TextXLarge.Black">
+        <item name="android:textColor">@color/text_black_primary</item>
+    </style>
+
+    <style name="TextXXLarge.Black">
+        <item name="android:textColor">@color/text_black_primary</item>
+    </style>
+
+    <style name="TextLarge.Black">
+        <item name="android:textColor">@color/text_black_primary</item>
+    </style>
+
+    <style name="TextMedium.Black">
+        <item name="android:textColor">@color/text_black_primary</item>
+    </style>
+
+    <style name="TextSmall.Black">
+        <item name="android:textColor">@color/text_black_primary</item>
     </style>
 
 </resources>
