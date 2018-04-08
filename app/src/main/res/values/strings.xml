@@ -2,8 +2,8 @@
     <string name="app_name" translatable="false">MovieDatabase</string>
 
     <!--TMD Api-->
-    <string name="tmd_base_url" translatable="true">https://api.themoviedb.org/3/</string>
-    <string name="tmd_api_key" translatable="true">196b27048200313ebfa19c7c55c37570</string>
+    <string name="TMDb_base_url" translatable="true">https://api.themoviedb.org/3/</string>
+    <string name="TMDb_api_key" translatable="true">196b27048200313ebfa19c7c55c37570</string>
 
     <!--Loading view-->
     <string name="loading_view_error_msg">We are sorry, an unexpected error has occurred.</string>

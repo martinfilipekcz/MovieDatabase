@@ -1,4 +1,4 @@
-package com.example.martinfilipek.moviedatabase.activity;
+package com.example.martinfilipek.moviedatabase.activity.main;
 
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 
 import com.example.martinfilipek.moviedatabase.R;
+import com.example.martinfilipek.moviedatabase.activity.BaseMvpActivity;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityPresenter;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityView;
 import com.example.martinfilipek.moviedatabase.view.LoadingView;
