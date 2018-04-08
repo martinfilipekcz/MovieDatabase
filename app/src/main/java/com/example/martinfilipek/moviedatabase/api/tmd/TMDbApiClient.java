@@ -60,7 +60,7 @@ public class TMDbApiClient {
                     HttpUrl originalHttpUrl = original.url();
 
                     HttpUrl url = originalHttpUrl.newBuilder()
-                            .addQueryParameter("api_get", fetchString(R.string.TMDb_api_key))
+                            .addQueryParameter("api_key", fetchString(R.string.TMDb_api_key))
                             .build();
 
                     Request.Builder requestBuilder = original.newBuilder()
