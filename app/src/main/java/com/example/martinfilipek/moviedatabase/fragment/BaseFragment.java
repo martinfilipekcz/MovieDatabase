@@ -56,6 +56,14 @@ public abstract class BaseFragment extends Fragment {
         getBaseActivity().setTitle(titleResId);
     }
 
+    protected void setSubtitle(String subtitle){
+        getBaseActivity().setSubtitle(subtitle);
+    }
+
+    protected void setSubtitle(@StringRes int subtitleResId){
+        setSubtitle(fetchString(subtitleResId));
+    }
+
     public String getFragmentTag() {
         return this.getClass().getSimpleName();
     }

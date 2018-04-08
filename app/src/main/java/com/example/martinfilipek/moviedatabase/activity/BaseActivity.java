@@ -51,6 +51,16 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    public void setSubtitle(String subtitle){
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setSubtitle(subtitle);
+        }
+    }
+
+    public void setSubtitle(@StringRes int subtitleResId){
+        setSubtitle(getString(subtitleResId));
+    }
+
     protected void setHomeUpAsEnabled(boolean enabled) {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(enabled);

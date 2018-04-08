@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".activity.main.MainActivity">
 
@@ -11,23 +13,25 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize" />
 
-    <com.example.martinfilipek.moviedatabase.view.LoadingView
-        android:id="@+id/loadingView"
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawerMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
 
-        <RelativeLayout
+        tools:openDrawer="start">
+
+        <FrameLayout
             android:id="@+id/content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:src="@drawable/logo_the_movie_db" />
-
-        </RelativeLayout>
-    </com.example.martinfilipek.moviedatabase.view.LoadingView>
-
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigationMain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:itemIconTint="@color/colorAccent"
+            app:menu="@menu/menu_drawer_main" />
+    </android.support.v4.widget.DrawerLayout>
 </LinearLayout>
+

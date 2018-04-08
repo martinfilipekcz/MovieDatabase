@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--Navigation drawer-->
+    <string name="navigation_drawer_open">Otevřít boční menu</string>
+    <string name="navigation_drawer_close">Zavřít boční menu</string>
+
+    <!--Navigation drawer menu-->
+    <string name="menu_navigation_drawer_movie">Filmy</string>
+    <string name="menu_navigation_drawer_serial">Seriálny</string>
+    <string name="menu_navigation_drawer_about">O aplikaci</string>
+
     <!--Loading view-->
     <string name="loading_view_error_msg">Omlouváme se, nastala neočekávaná chyba.</string>
     <string name="loading_view_no_connection">Zkontrolujte vaše připojení k internetu.</string>
