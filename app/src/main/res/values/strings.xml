@@ -5,8 +5,18 @@
     <string name="TMDb_base_url" translatable="true">https://api.themoviedb.org/3/</string>
     <string name="TMDb_api_key" translatable="true">196b27048200313ebfa19c7c55c37570</string>
 
+    <!--Navigation drawer-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--Navigation drawer menu-->
+    <string name="menu_navigation_drawer_movie">Movies</string>
+    <string name="menu_navigation_drawer_serial">Serials</string>
+    <string name="menu_navigation_drawer_about">About application</string>
+
     <!--Loading view-->
     <string name="loading_view_error_msg">We are sorry, an unexpected error has occurred.</string>
     <string name="loading_view_no_connection">Check your internet connection.</string>
     <string name="loading_view_reload_btn">Reload</string>
+
 </resources>

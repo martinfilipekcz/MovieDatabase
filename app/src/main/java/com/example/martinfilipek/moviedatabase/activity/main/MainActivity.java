@@ -1,48 +1,41 @@
 package com.example.martinfilipek.moviedatabase.activity.main;
 
-import android.os.Handler;
+import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.view.MenuItem;
 
 import com.example.martinfilipek.moviedatabase.R;
 import com.example.martinfilipek.moviedatabase.activity.BaseMvpActivity;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityPresenter;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityView;
-import com.example.martinfilipek.moviedatabase.view.LoadingView;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
+
 
 public class MainActivity extends BaseMvpActivity<MainActivityPresenter, MainActivityView>
-        implements MainActivityView {
+        implements MainActivityView, NavigationView.OnNavigationItemSelectedListener {
 
-    @BindView(R.id.loadingView)
-    LoadingView vLoading;
-
-    ArrayList<LoadingView.State> states = new ArrayList<>();
-
-    private static final String TAG = "MainActivity";
-
-    private int position = 0;
+    @BindView(R.id.drawerMain)
+    DrawerLayout vDrawerLayout;
+    @BindView(R.id.navigationMain)
+    NavigationView vNavigationLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        states.add(LoadingView.State.LOADING);
-        states.add(LoadingView.State.ERROR);
-        states.add(LoadingView.State.NO_CONNECTION);
-        states.add(LoadingView.State.EMPTY);
-        states.add(LoadingView.State.NORMAL);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, vDrawerLayout, vToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
-        vLoading.setOnReloadClickListener(() -> {});
-
-        testLoading();
+        vDrawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        vNavigationLayout.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -55,24 +48,21 @@ public class MainActivity extends BaseMvpActivity<MainActivityPresenter, MainAct
         return new MainActivityPresenter();
     }
 
-    private void testLoading() {
-        Handler handler = new Handler();
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                changeView();
-                handler.postDelayed(this, 5000);
-            }
-        };
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
 
-        handler.post(runnable);
-    }
-
-    private void changeView() {
-        if (position < 5) {
-            Log.d(TAG, "changeView: " + states.get(position));
-            vLoading.setState(states.get(position));
-            position++;
+        switch (id){
+            case R.id.nav_movie_fragment:
+                break;
+            case R.id.nav_serial_fragment:
+                break;
+            case R.id.nav_about_fragment:
+                break;
         }
+
+        vDrawerLayout.closeDrawer(GravityCompat.START);
+
+        return false;
     }
 }
