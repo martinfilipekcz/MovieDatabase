@@ -2,8 +2,9 @@
     <string name="app_name" translatable="false">MovieDatabase</string>
 
     <!--TMD Api-->
-    <string name="TMDb_base_url" translatable="true">https://api.themoviedb.org/3/</string>
-    <string name="TMDb_api_key" translatable="true">196b27048200313ebfa19c7c55c37570</string>
+    <string name="TMDb_base_url" translatable="false">https://api.themoviedb.org/3/</string>
+    <string name="TMDB_images_url" translatable="false">https://image.tmdb.org/t/p/w200</string>
+    <string name="TMDb_api_key" translatable="false">196b27048200313ebfa19c7c55c37570</string>
 
     <!--Navigation drawer-->
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -18,5 +19,10 @@
     <string name="loading_view_error_msg">We are sorry, an unexpected error has occurred.</string>
     <string name="loading_view_no_connection">Check your internet connection.</string>
     <string name="loading_view_reload_btn">Reload</string>
+
+    <!--Activity/Fragment title-->
+    <string name="movies_title">Movies</string>
+    <string name="subtitle_popular">Popular</string>
+    <string name="serials_title">Serials</string>
 
 </resources>

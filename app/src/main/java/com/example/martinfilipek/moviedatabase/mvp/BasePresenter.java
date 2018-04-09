@@ -47,7 +47,7 @@ public abstract class BasePresenter<V extends BaseView> implements Presenter<V> 
     }
 
     protected boolean isViewAttached(){
-        return mView == null;
+        return mView != null;
     }
 
     protected PresenterComponent getPresenterComponent(){

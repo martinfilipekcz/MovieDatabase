@@ -15,4 +15,8 @@
     <string name="loading_view_no_connection">Zkontrolujte vaše připojení k internetu.</string>
     <string name="loading_view_reload_btn">Načíst znovu</string>
 
+    <!--Activity/Fragment title-->
+    <string name="movies_title">Filmy</string>
+    <string name="subtitle_popular">Populární</string>
+    <string name="serials_title">Seriály</string>
 </resources>

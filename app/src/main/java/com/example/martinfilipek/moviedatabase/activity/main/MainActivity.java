@@ -1,6 +1,5 @@
 package com.example.martinfilipek.moviedatabase.activity.main;
 
-import android.os.Build;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.os.Bundle;
@@ -12,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.martinfilipek.moviedatabase.R;
 import com.example.martinfilipek.moviedatabase.activity.BaseMvpActivity;
+import com.example.martinfilipek.moviedatabase.fragment.movies.MoviesFragment;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityPresenter;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityView;
 
@@ -36,6 +36,10 @@ public class MainActivity extends BaseMvpActivity<MainActivityPresenter, MainAct
         vDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
         vNavigationLayout.setNavigationItemSelectedListener(this);
+
+        if (savedInstanceState == null){
+            addFragment(MoviesFragment.newInstance());
+        }
     }
 
     @Override
