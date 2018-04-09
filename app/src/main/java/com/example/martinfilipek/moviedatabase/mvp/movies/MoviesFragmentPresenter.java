@@ -24,8 +24,6 @@ public class MoviesFragmentPresenter extends BasePresenter<MoviesFragmentView> {
     @Inject
     ApiServices mApiServices;
 
-    private boolean dataLoaded = false;
-
     @Override
     protected void inject() {
         getPresenterComponent().inject(this);
@@ -44,17 +42,22 @@ public class MoviesFragmentPresenter extends BasePresenter<MoviesFragmentView> {
 
             @Override
             public void onSuccess(MovieResponse movieResponse) {
-                if (isViewAttached() && movieResponse != null) {
-                    getView().onMoviesDownloaded(movieResponse.getMovieList());
-                } else {
-                    getView().showError();
+                if (isViewAttached()) {
+                    if(movieResponse != null){
+                        getView().onMoviesDownloaded(movieResponse.getMovieList());
+                    } else {
+                        getView().showError();
+                    }
                 }
             }
 
             @Override
             public void onError(Throwable e) {
                 e.printStackTrace();
-                getView().showError();
+                
+                if(isViewAttached()){
+                    getView().showError();
+                }
             }
         });
     }
