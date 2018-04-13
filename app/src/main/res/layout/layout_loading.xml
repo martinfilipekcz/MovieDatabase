@@ -75,7 +75,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_between_elements"
             android:text="@string/loading_view_no_connection" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnLoadingNoConnectionReload"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/loading_view_reload_btn" />
 
     </LinearLayout>
 

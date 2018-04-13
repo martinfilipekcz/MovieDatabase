@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.PluralsRes;
 import android.support.annotation.StringRes;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
@@ -21,6 +22,8 @@ import android.widget.ImageView;
 import com.example.martinfilipek.moviedatabase.R;
 import com.example.martinfilipek.moviedatabase.fragment.BaseFragment;
 import com.squareup.picasso.Picasso;
+
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -51,13 +54,13 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
-    public void setSubtitle(String subtitle){
-        if (getSupportActionBar() != null){
+    public void setSubtitle(String subtitle) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setSubtitle(subtitle);
         }
     }
 
-    public void setSubtitle(@StringRes int subtitleResId){
+    public void setSubtitle(@StringRes int subtitleResId) {
         setSubtitle(getString(subtitleResId));
     }
 
@@ -84,7 +87,11 @@ public abstract class BaseActivity extends AppCompatActivity {
     public void replaceFragment(int contentViewId, BaseFragment fragment, boolean addToBackStack) {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(contentViewId, fragment, fragment.getFragmentTag());
-        fragmentTransaction.addToBackStack(addToBackStack ? fragment.getFragmentTag() : null);
+
+        if (addToBackStack) {
+            fragmentTransaction.addToBackStack(null);
+        }
+
         fragmentTransaction.commit();
     }
 

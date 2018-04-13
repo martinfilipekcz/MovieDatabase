@@ -19,4 +19,8 @@
     <string name="movies_title">Filmy</string>
     <string name="subtitle_popular">Populární</string>
     <string name="serials_title">Seriály</string>
+
+    <!--About fragment-->
+    <string name="about_tmdb_attribution">Tento produkt používá TMDb api, ale není schválen nebo certifikován u TMDb.</string>
+    <string name="about_description">Tato aplikace slouží pouze jako ukázková aplikace.\n\nPoužité knihovny: RxJava 2, Dagger 2, ButterKnife, Retrofit, Picasso</string>
 </resources>

@@ -24,5 +24,9 @@
     <string name="movies_title">Movies</string>
     <string name="subtitle_popular">Popular</string>
     <string name="serials_title">Serials</string>
-
+    
+    <!--About fragment-->
+    <string name="about_tmdb_attribution">This product uses the TMDb API but is not endorsed or certified by TMDb.</string>
+    <string name="about_description">This application only serves as a example.\n\nUsed libraries: RxJava 2, Dagger 2, ButterKnife, Retrofit, Picasso</string>
+    
 </resources>

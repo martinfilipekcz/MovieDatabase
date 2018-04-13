@@ -11,6 +11,7 @@ import android.view.MenuItem;
 
 import com.example.martinfilipek.moviedatabase.R;
 import com.example.martinfilipek.moviedatabase.activity.BaseMvpActivity;
+import com.example.martinfilipek.moviedatabase.fragment.about.AboutFragment;
 import com.example.martinfilipek.moviedatabase.fragment.movies.MoviesFragment;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityPresenter;
 import com.example.martinfilipek.moviedatabase.mvp.main.MainActivityView;
@@ -58,10 +59,12 @@ public class MainActivity extends BaseMvpActivity<MainActivityPresenter, MainAct
 
         switch (id){
             case R.id.nav_movie_fragment:
+                replaceFragment(MoviesFragment.newInstance(), true);
                 break;
             case R.id.nav_serial_fragment:
                 break;
             case R.id.nav_about_fragment:
+                replaceFragment(new AboutFragment(), true);
                 break;
         }
 
