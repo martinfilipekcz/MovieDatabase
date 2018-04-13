@@ -24,6 +24,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Universal loading view.
@@ -80,11 +81,7 @@ public class LoadingView extends FrameLayout {
 
         ButterKnife.bind(this);
 
-        AppCompatButton btnReload = vErrorLayout.findViewById(R.id.btnLoadingErrorReload);
-
-        if (btnReload != null && mOnReloadClickListener != null) {
-            btnReload.setOnClickListener(v -> mOnReloadClickListener.onReloadClick());
-        } else if (mOnReloadClickListener == null) {
+        if (mOnReloadClickListener == null) {
             throw new IllegalStateException("You must to define OnReloadClickListener!");
         }
     }
@@ -194,6 +191,13 @@ public class LoadingView extends FrameLayout {
         }
 
         return null;
+    }
+
+    @OnClick({R.id.btnLoadingErrorReload, R.id.btnLoadingNoConnectionReload})
+    protected void onReloadClicked(){
+        if (mOnReloadClickListener != null){
+            mOnReloadClickListener.onReloadClick();
+        }
     }
 
     public void setOnReloadClickListener(OnReloadClickListener onReloadClickListener) {

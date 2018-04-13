@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/space_large">
+
+    <ImageView
+        android:id="@+id/imgAboutLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_between_elements"
+        android:src="@drawable/logo_the_movie_db" />
+
+    <TextView
+        android:id="@+id/txtAboutAttribution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgAboutLogo"
+        android:layout_marginBottom="@dimen/margin_between_elements"
+        android:text="@string/about_tmdb_attribution" />
+
+    <TextView
+        android:id="@+id/txtAboutDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtAboutAttribution"
+        android:text="@string/about_description" />
+
+</RelativeLayout>
